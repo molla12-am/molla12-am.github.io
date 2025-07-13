@@ -1,52 +1,105 @@
+
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9453581224163391"
-     crossorigin="anonymous"></script>
-    <title>My Static Website</title>
+    <meta charset='UTF-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <title><data:blog.pageTitle/></title>
+    
+    <!-- CSS Styles -->
+    <style type='text/css'>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f9f9f9;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .nav {
+            background: #34495e;
+            padding: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .post {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .post-title {
+            color: #2c3e50;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
-<body
-<header>
-    <h1>Hello World!</h1>
-    <p>This is my static website.</p>
-    </header>
-    <section>
-<p> **Social Media Manager (SMM)** needs a diverse skill set to effectively manage brands, engage audiences, and drive results. Here’s what you should know:</p>
+<body>
+    <!-- Header -->
+    <div class='header'>
+        <h1><data:blog.title/></h1>
+    </div>
 
-<p>### **1. Platform Expertise**  
-- Understand major platforms (Facebook, Instagram, Twitter/X, LinkedIn, TikTok, Pinterest, YouTube, etc.).  
-- Know algorithm changes, best posting times, and content formats (Reels, Stories, Carousels, etc.).  
+    <!-- Navigation Menu -->
+    <div class='nav'>
+        <a href='/'>Home</a>
+        <a href='/p/about.html'>About</a>
+        <a href='/p/contact.html'>Contact</a>
+    </div>
 
-### **2. Content Creation & Curation**  
-- Copywriting (captions, hashtags, CTAs).  
-- Basic graphic design (Canva, Adobe Creative Suite).  
-- Video editing (CapCut, Premiere Pro, InShot).  
-- Content calendars & scheduling tools (Hootsuite, Buffer, Later).  
+    <!-- Main Content -->
+    <div class='main'>
+        <b:section id='main' showaddelement='yes'>
+            <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog'>
+                <b:includable id='main' var='top'>
+                    <b:loop values='data:posts' var='post'>
+                        <div class='post'>
+                            <h2 class='post-title'><a expr:href='data:post.url'><data:post.title/></a></h2>
+                            <div class='post-body'><data:post.body/></div>
+                        </div>
+                    </b:loop>
+                </b:includable>
+            </b:widget>
+        </b:section>
+    </div>
 
-### **3. Strategy & Analytics**  
-- Set SMART goals (engagement, reach, conversions, ROI).  
-- Track KPIs (likes, shares, clicks, impressions, conversions).  
-- Use analytics tools (Meta Insights, Google Analytics, Sprout Social).  
-
-### **4. Community Management**  
-- Respond to comments/messages promptly.  
-- Handle negative feedback diplomatically.  
-- Foster engagement (polls, Q&As, user-generated content).  
-
-### **5. Advertising & Paid Social**  
-- Run and optimize paid campaigns (Meta Ads, TikTok Ads, LinkedIn Ads).  
-- Understand targeting, budgeting, and A/B testing.  
-
-### **6. SEO & Digital Marketing Basics**  
-- Keyword research for social SEO.  
-- Collaborate with influencers & affiliate marketers.  
-- Understand email marketing and cross-promotion.  
-</p>
-
-
-
-
-        
-    </section>
+    <!-- Footer -->
+    <div class='footer'>
+        <p>© <data:blog.title/> - All Rights Reserved</p>
+    </div>
 </body>
 </html>
+
+
+
+    
